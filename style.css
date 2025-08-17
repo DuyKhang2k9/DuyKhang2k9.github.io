@@ -1,0 +1,196 @@
+/* Import font Roboto Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+/* Toàn màn hình */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #4487f3, #4586ff, #1d78f0, #125fee);
+  overflow: hidden;
+  color: white;
+}
+
+.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* nằm dưới nội dung */
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+}
+
+
+
+ul {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+
+li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.fa-brands {
+    color: #262626;
+    font-size: 40px;
+    line-height: 80px;
+    transition: .5s;
+    padding-right: 14px;
+}
+
+.fa {
+    color: #262626;
+    font-size: 40px;
+    line-height: 80px;
+    transition: .5s;
+    padding-right: 14px;
+}
+
+a {
+    width: 210px;
+    height: 80px;
+    background: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg) translate(0, 0);
+    box-shadow: -20px 20px 10px #00000080;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+            box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+
+a span {
+    color: #262626;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    top: 10px;
+    left: -20px;
+    transform: rotate(0deg) skewY(-45deg);
+}
+a::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1;
+    bottom: -20px;
+    left: -10px;
+    transform: rotate(0deg) skewX(-45deg);
+    
+}
+
+a:hover {
+    transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+    box-shadow: -50px 50px 50px #00000080;
+}
+
+li:hover .fa-brands,
+li:hover .fa,
+li:hover span {
+    color: #fff;
+}
+
+/* Facebook */
+li:hover:nth-child(1) a {
+    background: #3b5998;
+}
+li:hover:nth-child(1) a::before {
+    background: #365492;
+}
+li:hover:nth-child(1) a::after {
+     background: #4a69ad;
+}
+
+/* Github */
+li:hover:nth-child(2) a {
+    background: #0c0c0c;
+}
+li:hover:nth-child(2) a::before {
+    background: #0c0c0cce;
+}
+li:hover:nth-child(2) a::after {
+    background: #0c0c0cf6;
+}
+
+/* TikTok */
+li:hover:nth-child(3) a {
+    background: #080808;
+}
+li:hover:nth-child(3) a::before {
+    background: #000000ea;
+}
+li:hover:nth-child(3) a::after {
+    background: #000000d2;
+}
+
+/* Discord */
+li:hover:nth-child(4) a {
+    background: #5865F2;
+}
+li:hover:nth-child(4) a::before {
+    background: #4752C4;
+}
+li:hover:nth-child(4) a::after {
+    background: #7983F5;
+}
+  
+/*chuyển khoản*/
+li:hover:nth-child(5) a {
+    background: #0c0c0c;
+}
+li:hover:nth-child(5) a::before {
+    background: #0c0c0cce;
+}
+li:hover:nth-child(5) a::after {
+    background: #0c0c0cf6;
+}
+
+
+/* Khung thông tin */
+.thong-tin {
+    font-family: "Montserrat", sans-serif;
+    width: 420px;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 30px 60px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.thong-tin h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
