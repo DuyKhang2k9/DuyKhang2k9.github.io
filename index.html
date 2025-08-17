@@ -1,233 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mẫu Kế Hoạch</title>
-    <style>
-        /* Nền đen cho trang */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Bo góc và nền cho các phần nhập liệu */
-        .form-section {
-            margin-bottom: 20px;
-            background-color: #444;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        /* Style cho nhãn */
-        label {
-            font-weight: bold;
-        }
-
-        /* Bảng màu trắng và bo góc */
-        table {
-            width: 100%;
-            background-color: #696969;
-            color: #BBBBBB;
-            border-radius: 8px;
-            overflow: hidden; /* Để bo góc không bị ảnh hưởng */
-            margin-top: 10px;
-        }
-
-        /* Viền và padding của bảng */
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-
-        /* Bo góc cho các ô nhập liệu */
-        input, select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            background-color: #BBBBBB;
-            color: black;
-        }
-
-        /* Nút lưu */
-        .save-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .save-button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>None</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Kế Hoạch TH Dream</h1>
-
-    <!-- Mục tiêu -->
-    <div class="form-section">
-        <label for="muc-tieu">Mục tiêu:</label>
-        <input type="text" id="muc-tieu" name="muc-tieu" placeholder="MTM Đạt Đc">
+    <div class="starfield"></div>
+    <div class="thong-tin">
+        <h1>Thông tin cá nhân</h1>
+        <p>STK: 700013115531</p>    
+        <p>SĐT: 0392964903</p>
     </div>
-
-    <!-- Thời gian TH -->
-    <div class="form-section">
-        <label for="thoi-gian-th">Thời gian TH:</label>
-        <input type="text" id="thoi-gian-th" name="thoi-gian-th" placeholder="Ngày TH">
+    <div>
+         <ul>
+             <li>
+                 <a href="https://www.facebook.com/duy.khang.eh.2k9">
+                     <i class="fa-brands fa-facebook-f"></i>
+                     <span> - Faceboock</span>
+                 </a>
+             </li>
+             <li>
+                 <a href="https://github.com/DuyKhang2k9">
+                     <i class="fa-brands fa-github"></i>
+                     <span> - Github</span>
+                 </a>
+             </li>
+             <li>
+                 <a href="https://www.tiktok.com/@dk1810962570?is_from_webapp=1&sender_device=pc">
+                     <i class="fa-brands fa-tiktok"></i>
+                     <span> - TikTok</span>
+                 </a>
+             </li>
+             <li>
+                 <a href="https://discord.gg/fQed6JCKWS">
+                     <i class="fa-brands fa-discord"></i>
+                     <span> - Discord</span>
+                 </a>
+             </li>
+             <li>
+                 <a href="QRCode.html">
+                     <i class="fa fa-qrcode"></i>
+                     <span> - Chuyển Khoản</span>
+                 </a>
+             </li>
+         </ul>
     </div>
+    
 
-    <!-- Số Tiền Thiếu ĐTHMT -->
-    <div class="form-section">
-        <label for="so-tien-thieu">Số Tiền Thiếu ĐTHMT:</label>
-        <input type="number" id="so-tien-thieu" name="so-tien-thieu" placeholder="Số Tiền Còn Thiếu">
-    </div>
 
-    <!-- Biện Pháp TH Để Có Thêm TN THMTTC -->
-    <div class="form-section">
-        <label for="bien-phap-th">Biện Pháp TH Để Có Thêm TN THMTTC:</label>
-        <select id="bien-phap-th" name="bien-phap-th">
-            <option value="" disabled selected>Kế Hoạch</option>
-            <option value="bien-phap-1">Nhặt Rác</option>
-            <option value="bien-phap-2">Chưa Bt</option>
-            <option value="bien-phap-3">Cập Nhật Theo Thời Gian</option>
-        </select>
-    </div>
 
-    <!-- Kế hoạch cụ thể -->
-    <div class="form-section">
-        <label>Kế hoạch cụ thể:</label>
-        <table>
-            <thead>
-                <tr>
-                    <th>Công Việc Đã Lm</th>
-                    <th>Đã Thu Đc</th>
-                    <th>Đã chi</th> <!-- Thêm cột mới -->
-                    <th>Thời gian</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="ĐChi"></td>
-                    <td><input type="text" placeholder="Tha1"></td> <!-- Thêm ô nhập liệu cho bản chi -->
-                </tr>
-                <!-- Thêm các hàng khác -->
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha2"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha3"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha4"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha5"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha6"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha7"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha8"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha9"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha10"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha11"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Việc"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Tha12"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="Tổng"></td>
-                    <td><input type="text" placeholder="Đã TH"></td>
-                    <td><input type="text" placeholder="Đã Chi"></td>
-                    <td><input type="text" placeholder="Còn"></td>
-                </tr>
-                <!-- Thêm các hàng mới nếu cần -->
-            </tbody>
-        </table>
-    </div>
 
-    <button class="save-button" onclick="saveData()">Lưu Dữ Liệu</button>
-
-    <script>
-        // Hàm lưu dữ liệu vào Local Storage
-        function saveData() {
-            const data = {
-                mucTieu: document.getElementById('muc-tieu').value,
-                thoiGianTH: document.getElementById('thoi-gian-th').value,
-                soTienThieu: document.getElementById('so-tien-thieu').value,
-                bienPhapTH: document.getElementById('bien-phap-th').value
-            };
-            localStorage.setItem('keHoachData', JSON.stringify(data));
-            alert('Dữ liệu đã được lưu!');
-        }
-
-        // Hàm tải dữ liệu từ Local Storage
-        function loadData() {
-            const savedData = localStorage.getItem('keHoachData');
-            if (savedData) {
-                const data = JSON.parse(savedData);
-                document.getElementById('muc-tieu').value = data.mucTieu;
-                document.getElementById('thoi-gian-th').value = data.thoiGianTH;
-                document.getElementById('so-tien-thieu').value = data.soTienThieu;
-                document.getElementById('bien-phap-th').value = data.bienPhapTH;
-            }
-        }
-
-        // Tự động tải dữ liệu khi trang mở
-        window.onload = loadData;
-    </script>
 
 </body>
+<script src="js/script.js"></script>
 </html>
