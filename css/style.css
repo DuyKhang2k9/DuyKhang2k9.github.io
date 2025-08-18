@@ -194,6 +194,23 @@ li:hover:nth-child(5) a::after {
     text-align: center;
 }
 
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;   /* Xếp dọc */
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    margin-top: 200px;        /* Đẩy xuống dưới phần "Thông tin cá nhân" */
+    gap: 30px;                /* Khoảng cách giữa các nút */
+  }
+
+  li {
+    margin: 0; /* bỏ margin ngang */
+  }
+}
+
+
 
 
 
