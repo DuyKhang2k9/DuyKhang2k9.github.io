@@ -4,14 +4,30 @@
 @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
 /* Toàn màn hình */
+/*body {
+  margin: 0;
+  min-height: 500vh;  */
+  /*background: linear-gradient(45deg, #4487f3, #4586ff, #1d78f0, #125fee);*/
+  /*background: #00FFFF;
+  background-attachment: fixed;
+  overflow-x: hidden; 
+  color: white;
+}*/
 body {
   margin: 0;
-  min-height: 500vh;  /* cao ít nhất = chiều cao màn hình, nhưng cho phép dài thêm */
-  /*background: linear-gradient(45deg, #4487f3, #4586ff, #1d78f0, #125fee);*/
-  background: #00FFFF;
-  background-attachment: fixed; /* giữ gradient cố định khi cuộn */
-  overflow-x: hidden; /* chỉ ẩn tràn ngang, vẫn cuộn dọc */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff512f, #dd2476, #4487f3, #1d78f0, #12c2e9, #f64f59);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  background-attachment: fixed;
+  overflow-x: hidden;
   color: white;
+}
+
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
@@ -219,6 +235,7 @@ li:hover:nth-child(5) a::after {
     margin: 0; /* bỏ margin ngang */
   }
 }
+
 
 
 
