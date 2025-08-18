@@ -193,7 +193,11 @@ li:hover:nth-child(5) a::after {
     transform: translateX(-50%);
 }
 .thong-tin h1 {
-    font-size: 60px;
+    font-size: 100px;
+    text-align: center;
+}
+.thong-tin h3 {
+    font-size: 30px;
     text-align: center;
 }
 
@@ -212,6 +216,7 @@ li:hover:nth-child(5) a::after {
     margin: 0; /* bỏ margin ngang */
   }
 }
+
 
 
 
