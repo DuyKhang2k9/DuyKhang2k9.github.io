@@ -201,7 +201,7 @@ li:hover:nth-child(5) a::after {
 /* Khung thông tin */
 .thong-tin {
     font-family: "Montserrat", sans-serif;
-    width: 520px;
+    width: 900px;
     background: transparent;
     color: black;
     border-radius: 10px;
@@ -216,7 +216,7 @@ li:hover:nth-child(5) a::after {
     text-align: center;
 }
 .thong-tin h3 {
-    font-size: 30px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -235,6 +235,7 @@ li:hover:nth-child(5) a::after {
     margin: 0; /* bỏ margin ngang */
   }
 }
+
 
 
 
