@@ -195,10 +195,6 @@ li:hover:nth-child(5) a::after {
 }
 
 
-.hm {
-    color: #262626;
-    font-size: 40px;
-    line-height: 80px;
-    transition: .5s;
-    padding-right: 14px;
-}
+
+
+
