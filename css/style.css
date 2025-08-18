@@ -6,11 +6,13 @@
 /* Toàn màn hình */
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;  /* cao ít nhất = chiều cao màn hình, nhưng cho phép dài thêm */
   background: linear-gradient(45deg, #4487f3, #4586ff, #1d78f0, #125fee);
-  overflow: hidden;
+  background-attachment: fixed; /* giữ gradient cố định khi cuộn */
+  overflow-x: hidden; /* chỉ ẩn tràn ngang, vẫn cuộn dọc */
   color: white;
 }
+
 
 .starfield {
   position: fixed;
@@ -209,6 +211,7 @@ li:hover:nth-child(5) a::after {
     margin: 0; /* bỏ margin ngang */
   }
 }
+
 
 
 
