@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Free? 😏</title>
+    <style>
+        body { background: black; color: white; text-align: center; font-family: Arial; padding: 50px; }
+        #bait { cursor: pointer; font-size: 24px; color: lime; }
+    </style>
+</head>
+<body>
+    <h1>Đang kết nối WiFi... Chờ tí nha bro! 🌚</h1>
+    <p id="bait" onclick="playSound()">Click để kết nối nhanh hơn (nếu chậm)</p>
+    
+    <!-- Âm thanh troll ẩn, autoplay -->
+    <audio id="trollSound" src="moan.mp3" autoplay loop preload="auto">
+        Trình duyệt mày lỗi rồi, tải sound thủ công đi: <a href="moan.mp3">Download</a>
+    </audio>
+    
+    <script>
+        // Trick cho browser block: Chờ user click rồi play chắc chắn
+        document.getElementById('bait').addEventListener('click', function() {
+            const audio = document.getElementById('trollSound');
+            audio.play().catch(e => console.log('Browser block, nhưng đã click rồi!'));
+            this.style.display = 'none'; // Ẩn nút sau click
+        });
+        
+        // Thử autoplay ngay, nếu fail thì chờ click
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('trollSound');
+            audio.play().catch(e => {
+                console.log('Autoplay blocked, chờ click...');
+            });
+        });
+    </script>
+</body>
+</html>
